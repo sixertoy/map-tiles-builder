@@ -1,0 +1,30 @@
+{
+  "name": "map-tiles-builder",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A CLI tool to generate map tiles from an image file containing high resolution maps.",
+  "dependencies": {
+    "fs-extra": "^11.3.1",
+    "image-size": "^2.0.2",
+    "sharp": "^0.34.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/node": "^24.2.1",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-sort-destructure-keys": "^2.0.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "prettier": "^3.6.2"
+  },
+  "scripts": {
+    "cleanup": "rm -rf node_modules",
+    "prettier": "prettier . --check",
+    "format": "prettier . --write",
+    "lint": "eslint src/**/*.{js,ts} --config=eslint.config.js",
+    "build": "./scripts/build.sh"
+  }
+}
